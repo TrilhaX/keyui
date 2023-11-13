@@ -1,0 +1,118 @@
+local ScreenGui = Instance.new("ScreenGui")
+local ImageLabel = Instance.new("ImageLabel")
+local Frame = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local GK = Instance.new("TextButton")
+local VK = Instance.new("TextButton")
+local TextBox = Instance.new("TextBox")
+local Frame_3 = Instance.new("Frame")
+local Frame_4 = Instance.new("Frame")
+local Frame_5 = Instance.new("Frame")
+local Frame_6 = Instance.new("Frame")
+ 
+
+function WindowUiKey()
+ScreenGui.Parent = game.CoreGui
+
+ImageLabel.Parent = ScreenGui
+ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.34270516, 0, 0.235849053, 0)
+ImageLabel.Size = UDim2.new(0, 411, 0, 270)
+ImageLabel.Image = "rbxassetid://15349072795"
+
+Frame.Parent = ImageLabel
+Frame.BackgroundColor3 = Color3.new(0, 0, 0)
+Frame.BorderColor3 = Color3.new(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(1.48504029e-07, 0, -0.0966053158, 0)
+Frame.Size = UDim2.new(0, 411, 0, 39)
+
+Frame_2.Parent = ImageLabel
+Frame_2.BackgroundColor3 = Color3.new(0, 0, 0)
+Frame_2.BorderColor3 = Color3.new(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0, 0, 0.962447643, 0)
+Frame_2.Size = UDim2.new(0, 411, 0, 101)
+
+TextBox.Parent = ImageLabel
+TextBox.BackgroundColor3 = Color3.new(1, 1, 1)
+TextBox.BorderColor3 = Color3.new(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.253782392, 0, 0.893266857, 0)
+TextBox.Size = UDim2.new(0, 200, 0, 50)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.new(0, 0, 0)
+TextBox.TextSize = 14
+
+Frame_3.Parent = ImageLabel
+Frame_3.BackgroundColor3 = Color3.new(0, 0, 0)
+Frame_3.BorderColor3 = Color3.new(0, 0, 0)
+Frame_3.BorderSizePixel = 0
+Frame_3.Position = UDim2.new(0, 0, 0.962447584, 0)
+Frame_3.Size = UDim2.new(0, 89, 0, 22)
+
+Frame_4.Parent = ImageLabel
+Frame_4.BackgroundColor3 = Color3.new(0, 0, 0)
+Frame_4.BorderColor3 = Color3.new(0, 0, 0)
+Frame_4.BorderSizePixel = 0
+Frame_4.Position = UDim2.new(0.782094538, 0, 0.962447584, 0)
+Frame_4.Size = UDim2.new(0, 90, 0, 22)
+
+Frame_5.Parent = ImageLabel
+Frame_5.BackgroundColor3 = Color3.new(0, 0, 0)
+Frame_5.BorderColor3 = Color3.new(0, 0, 0)
+Frame_5.BorderSizePixel = 0
+Frame_5.Position = UDim2.new(0.779655218, 0, -0.0338487402, 0)
+Frame_5.Size = UDim2.new(0, 90, 0, 22)
+
+Frame_6.Parent = ImageLabel
+Frame_6.BackgroundColor3 = Color3.new(0, 0, 0)
+Frame_6.BorderColor3 = Color3.new(0, 0, 0)
+Frame_6.BorderSizePixel = 0
+Frame_6.Position = UDim2.new(0, 0, -0.0338487402, 0)
+Frame_6.Size = UDim2.new(0, 90, 0, 22)
+end
+
+function GetKey()
+    GK.Name = "GK"
+    GK.Parent = Frame_2
+    GK.BackgroundColor3 = Color3.new(0.278431, 0.278431, 0.278431)
+    GK.BorderColor3 = Color3.new(0, 0, 0)
+    GK.BorderSizePixel = 0
+    GK.Position = UDim2.new(0.152530685, 0, 0.405647188, 0)
+    GK.Size = UDim2.new(0, 112, 0, 50)
+    GK.Font = Enum.Font.SourceSans
+    GK.Text = "Get Key"
+    GK.TextColor3 = Color3.new(1, 1, 1)
+    GK.TextSize = 14
+    end
+    
+    function VerifyKey()
+    VK.Name = "VK"
+    VK.Parent = Frame_2
+    VK.BackgroundColor3 = Color3.new(0.278431, 0.278431, 0.278431)
+    VK.BorderColor3 = Color3.new(1, 1, 1)
+    VK.BorderSizePixel = 0
+    VK.Position = UDim2.new(0.577294707, 0, 0.396039605, 0)
+    VK.Size = UDim2.new(0, 112, 0, 50)
+    VK.Font = Enum.Font.SourceSans
+    VK.Text = "Verify Key"
+    VK.TextColor3 = Color3.new(1, 1, 1)
+    VK.TextSize = 14
+    end
+
+local function GetResizeUI()
+	local X, Y = 550, 600
+	local offset = 20
+	local camX, camY = camera.ViewportSize.X, camera.ViewportSize.Y
+	if camY < Y + offset then
+		Y = camY - offset
+	end
+	if camX < X then
+		X = camX - offset
+	end
+	return X, Y
+end
